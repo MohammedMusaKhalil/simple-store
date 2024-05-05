@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    .product-details {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    
+    .comments-section {
+      margin-top: 40px;
+    }
+    
+    .comment {
+      margin-bottom: 10px;
+    }
+    
+    .comment-author {
+      font-weight: bold;
+    }
+    
+    .comment-text {
+      margin-top: 5px;
+    }
+    
+    .buy-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="product-title">It's a soft drink</h1>
+    
+    <img id="receivedImage" class="product-image" src="" alt="Product Image">
+    
+    <p class="product-details">
+      It is a cold soft drink available 24 hours a day
+    </p>
+    
+    <div class="comments-section">
+      <h2>Comments</h2>
+      
+      <div class="comment">
+        <p class="comment-text">cold</p>
+        <p class="comment-text">There is a delivery</p>
+        <p class="comment-text">service</p>
+        <p class="comment-text">Cheap</p>
+
+      </div>
+      
+      <div class="comment">
+        <p class="comment-text">Jane Smith</p>
+        <p class="comment-text">I've been using this product for months and it has exceeded my expectations.</p>
+      </div>
+    </div>
+    
+    <a href="purchasee.html" class="buy-button">Buy Now</a>
+    <a href="project.html" class="buy-button">Go back</a>
+  </div>
+
+  <script>
+      var urlParams = new URLSearchParams(window.location.search);
+    var routeValue = urlParams.get('routeValue');
+
+    // الوصول إلى عنصر الصورة وتحديث مسارها
+    var imageElement = document.getElementById('receivedImage');
+    imageElement.src = routeValue;
+  </script>
+</body>
+</html>
